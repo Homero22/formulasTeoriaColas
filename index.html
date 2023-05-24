@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teoría de Colas</title>
+    <link rel="stylesheet" href="index.css" />
+
+  </head>
+  <body class="grid-container">
+    <header class="header">
+      <h1>Teoría de Colas</h1>
+    </header>
+    <nav class="navbar">
+      <button id="btn1">PICM</button>
+      <button id="btn2">PFCM</button>
+      <button id="btn3">Botón 3</button>
+    </nav>
+    <aside class="sidebar">sidebar</aside>
+    <article class="main" id="main-content">
+
+      <div id="contenido-1" class="contenido">
+        <h2>Modelo Matemático PICM - M/M/k - Parámetros del Modelo</h2>
+        <p>M -> ∞
+          • K > 1; debe ser conocido.
+          • λ (lambda): Tasa a la cual llegan los clientes para ser atendidos. Tasa de llegada. Debe ser
+          conocida.
+          • µ (mu): Tasa a la cual cada unidad de servicio puede atender al cliente. Tasa de servicio. Debe
+          ser conocida.
+          CONDICIÓN DE ESTABILIDAD DEL SISTEMA: λ𝑘𝑘µ menor a 1.
+        </p>
+        <label> λ :</label>
+        <input type="number" id="input1" min="1" pattern="^[0-9]+">
+        <br>
+        <label>µ :</label>
+        <input type="number" id="input2" min="1" pattern="^[0-9]+">
+        <br>
+        <label>k :</label>
+        <input type="number" id="input3" min="1" pattern="^[0-9]+">
+        <br>
+        <button onclick="calcularResultado1()">Calcular</button>
+        <p id="Pk"></p>
+        <p id="Pk"></p>
+      </div>
+
+      <div id="contenido-2" class="contenido">
+        <label>Valor:</label>
+        <input type="number" id="input3">
+        <br>
+        <button onclick="calcularResultado2()">Calcular</button>
+        <p id="resultado2"></p>
+      </div>
+
+      <div id="contenido-3" class="contenido">
+        <label>Valor:</label>
+        <input type="number" id="input4">
+        <br>
+        <button onclick="calcularResultado3()">Calcular</button>
+        <p id="resultado3"></p>
+      </div>
+
+    </article>
+    <footer class="footer">footer</footer>
+    <script src="index.js"></script>
+  </body>
 </html>
