@@ -10,7 +10,7 @@
   </head>
   <body class="grid-container">
     <header class="header">
-      <h1>Teoría de Colas</h1>
+      <h2>Teoría de Colas</h2>
     </header>
     <nav class="navbar">
       <button id="btn1">PICM</button>
@@ -22,26 +22,31 @@
 
       <div id="contenido-1" class="contenido">
         <h2>Modelo Matemático PICM - M/M/k - Parámetros del Modelo</h2>
-        <p>M -> ∞
-          • K > 1; debe ser conocido.
-          • λ (lambda): Tasa a la cual llegan los clientes para ser atendidos. Tasa de llegada. Debe ser
-          conocida.
-          • µ (mu): Tasa a la cual cada unidad de servicio puede atender al cliente. Tasa de servicio. Debe
-          ser conocida.
-          CONDICIÓN DE ESTABILIDAD DEL SISTEMA: λ𝑘𝑘µ menor a 1.
-        </p>
+        <div>
+          <p>M -> ∞ <br>
+            • K > 1; debe ser conocido. <br>
+            • λ (lambda): Tasa a la cual llegan los clientes para ser atendidos. <br>
+            • µ (mu): Tasa a la cual cada unidad de servicio puede atender al cliente. <br>
+            CONDICIÓN DE ESTABILIDAD DEL SISTEMA: λ𝑘𝑘µ menor a 1.
+          </p>
+        </div>
         <label> λ :</label>
-        <input type="number" id="input1" min="1" pattern="^[0-9]+">
+        <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
         <br>
         <label>µ :</label>
-        <input type="number" id="input2" min="1" pattern="^[0-9]+">
+        <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
         <br>
         <label>k :</label>
-        <input type="number" id="input3" min="1" pattern="^[0-9]+">
+        <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
         <br>
         <button onclick="calcularResultado1()">Calcular</button>
+        <br>
+        <p>Probabilidad de hallar el sistema completamente vacío </p>
+        <p id="P0"></p>
+        <p>Probabilidad de que un usuario que llega, tenga que esperar</p>
         <p id="Pk"></p>
-        <p id="Pk"></p>
+        <p>Probabilidad de que un usuario que llega no tenga que esperar</p>
+        <p id="PNE"></p>
       </div>
 
       <div id="contenido-2" class="contenido">
