@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teoría de Colas</title>
     <link rel="stylesheet" href="index.css" />
-
   </head>
   <body class="grid-container">
     <header class="header">
@@ -17,56 +16,95 @@
       <button id="btn2">PFCM</button>
       <button id="btn3">Botón 3</button>
     </nav>
-    <aside class="sidebar">sidebar</aside>
+    <!-- <aside class="sidebar">sidebar</aside> -->
     <article class="main" id="main-content">
-
       <div id="contenido-1" class="contenido">
         <h2>Modelo Matemático PICM - M/M/k - Parámetros del Modelo</h2>
-        <div>
-          <p>M -> ∞ <br>
-            • K > 1; debe ser conocido. <br>
-            • λ (lambda): Tasa a la cual llegan los clientes para ser atendidos. <br>
-            • µ (mu): Tasa a la cual cada unidad de servicio puede atender al cliente. <br>
-            CONDICIÓN DE ESTABILIDAD DEL SISTEMA: λ𝑘𝑘µ menor a 1.
+        <div class="informacion">
+          <p>
+            <span class="bullet">&#8226;</span> M &rarr; &infin; <br>
+            <span class="bullet">&#8226;</span> K &gt; 1; debe ser conocido. <br>
+            <span class="bullet">&#8226;</span> &lambda; (lambda): Tasa a la cual llegan los clientes para ser atendidos. <br>
+            <span class="bullet">&#8226;</span> &mu; (mu): Tasa a la cual cada unidad de servicio puede atender al cliente. <br>
+            <span class="bullet">&#8226;</span> k: Número de unidades de servicio. <br>
+            CONDICIÓN DE ESTABILIDAD DEL SISTEMA: k&mu; &gt; &lambda;
           </p>
         </div>
-        <label> λ :</label>
-        <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
-        <br>
-        <label>µ :</label>
-        <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
-        <br>
-        <label>k :</label>
-        <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
-        <br>
+        <div class="ingreso">
+          <label for="input1">λ :</label>
+          <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input2">µ :</label>
+          <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input3">k :</label>
+          <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+        </div>
+        
         <button onclick="calcularResultado1()">Calcular</button>
         <br>
-        <p>Probabilidad de hallar el sistema completamente vacío </p>
-        <p id="P0"></p>
-        <p>Probabilidad de que un usuario que llega, tenga que esperar</p>
-        <p id="Pk"></p>
-        <p>Probabilidad de que un usuario que llega no tenga que esperar</p>
-        <p id="PNE"></p>
+        <div class="resultados-contenedor">
+          <p class="resultado-titulo">Probabilidad de hallar el sistema completamente vacío</p>
+          <p id="P0" class="resultado"></p>
+          <p class="resultado-titulo">Probabilidad de que un usuario que llega, tenga que esperar</p>
+          <p id="Pk" class="resultado"></p>
+          <p class="resultado-titulo">Probabilidad de que un usuario que llega no tenga que esperar</p>
+          <p id="PNE" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en el sistema</p>
+          <p id="L" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en la cola</p>
+          <p id="Lq" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en la cola no vacía</p>
+          <p id="Ln" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en el sistema</p>
+          <p id="W" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en cola</p>
+          <p id="Wq" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en cola para colas no vacías</p>
+          <p id="Wn" class="resultado"></p>
+          
+        
+        </div>
+        
+
+
+
+
+
+        <label>n :</label>
+        <input
+          type="number"
+          id="input4"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br />
+        <button onclick="calcularResultado2()">Calcular</button>
+        <p>La probabilidad de hallar exactamente n clientes dentro del sistema:</p>
+        <p id="Pn"></p>
       </div>
 
       <div id="contenido-2" class="contenido">
         <label>Valor:</label>
-        <input type="number" id="input3">
-        <br>
+        <input type="number" id="input3" />
+        <br />
         <button onclick="calcularResultado2()">Calcular</button>
         <p id="resultado2"></p>
       </div>
 
       <div id="contenido-3" class="contenido">
         <label>Valor:</label>
-        <input type="number" id="input4">
-        <br>
+        <input type="number" id="input4" />
+        <br />
         <button onclick="calcularResultado3()">Calcular</button>
         <p id="resultado3"></p>
       </div>
-
     </article>
-    <footer class="footer">footer</footer>
+    <footer class="footer"></footer>
     <script src="index.js"></script>
   </body>
 </html>
