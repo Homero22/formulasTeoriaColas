@@ -40,7 +40,7 @@
           <label for="input3">k :</label>
           <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
           <br>
-        </div>
+        </div> 
         
         <button onclick="calcularResultado1()">Calcular</button>
         <br>
@@ -86,20 +86,211 @@
         <button onclick="calcularResultado2()">Calcular</button>
         <p>La probabilidad de hallar exactamente n clientes dentro del sistema:</p>
         <p id="Pn"></p>
+        <br>
+
+        <p>COSTOS</p>
+        <label>horas :</label>
+        <input
+          type="number"
+          id="input5"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+
+        <label>CTE $/h:</label>
+        <input
+          type="number"
+          id="input6"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CTS $/h:</label>
+        <input
+          type="number"
+          id="input7"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CTSE $/h:</label>
+        <input
+          type="number"
+          id="input8"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CS $/h:</label>
+        <input
+          type="number"
+          id="input9"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+
+        <button onclick="calcularResultado3()">Calcular</button>
+        <p id="CTTE"></p>
+        <br>
+        <p id="CTTS"></p>
+        <br>
+        <p id="CTTSer"></p>
+        <br>
+        <p id="CTS"></p>
+        <br>
+        <p>Costo Total Diario del Sistema:</p>
+        <br>
+        <p id="CT"></p>
+        <br>
+
+
+
+
       </div>
 
       <div id="contenido-2" class="contenido">
-        <label>Valor:</label>
-        <input type="number" id="input3" />
-        <br />
-        <button onclick="calcularResultado2()">Calcular</button>
-        <p id="resultado2"></p>
+        <div class="ingreso">
+          <label for="input1">M :</label>
+          <input type="number" id="inputM" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input2">λ :</label>
+          <input type="number" id="inputL" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input3">µ :</label>
+          <input type="number" id="inputU" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input4">k :</label>
+          <input type="number" id="inputK" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+          <label for="input5">n :</label>
+          <input type="number" id="inputN" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" title="Ingresa números enteros o decimales" required>
+          <br>
+
+        </div> 
+
+        <button onclick="calcularResultado4()">Calcular</button>
+        <div class="resultados-contenedor">
+
+          <p class="resultado-titulo">Probabilidad de hallar el sistema completamente vacío</p>
+          <p id="P0-F" class="resultado"></p>
+          <p class="resultado-titulo">Probabilidad de hallar n clientes el sistema </p>
+          <p id="Pn-F" class="resultado"></p>
+          <p class="resultado-titulo">Probabilidad de que un usuario que llega, tenga que esperar</p>
+          <p id="PE-F" class="resultado"></p>
+          <p class="resultado-titulo">Probabilidad de que un usuario que llega no tenga que esperar</p>
+          <p id="PNE-F" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en el sistema</p>
+          <p id="L-F" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en la cola</p>
+          <p id="Lq-F" class="resultado"></p>
+          <p class="resultado-titulo">Número esperado de clientes en la cola no vacía</p>
+          <p id="Ln-F" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en el sistema</p>
+          <p id="W-F" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en cola</p>
+          <p id="Wq-F" class="resultado"></p>
+          <p class="resultado-titulo">Tiempo esperado en cola para colas no vacías</p>
+          <p id="Wn-F" class="resultado"></p>
+
+        </div>
+        <p>COSTOS</p>
+        <label>horas :</label>
+        <input
+          type="number"
+          id="input10"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+
+        <label>CTE $/h:</label>
+        <input
+          type="number"
+          id="input11"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CTS $/h:</label>
+        <input
+          type="number"
+          id="input12"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CTSE $/h:</label>
+        <input
+          type="number"
+          id="input13"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+        <label>CS $/h:</label>
+        <input
+          type="number"
+          id="input14"
+          min="0"
+          step="any"
+          pattern="[0-9]+([.,][0-9]+)?"
+          title="Ingresa números enteros o decimales"
+          required
+        />
+        <br>
+
+        <button onclick="calcularResultado5()">Calcular</button>
+        <p id="CTTE2"></p>
+        <br>
+        <p id="CTTS2"></p>
+        <br>
+        <p id="CTTSer2"></p>
+        <br>
+        <p id="CTS2"></p>
+        <br>
+        <p>Costo Total Diario del Sistema:</p>
+        <br>
+        <p id="CT2"></p>
+        <br>
+
+
+
+
+
+
       </div>
 
       <div id="contenido-3" class="contenido">
-        <label>Valor:</label>
-        <input type="number" id="input4" />
-        <br />
+    
         <button onclick="calcularResultado3()">Calcular</button>
         <p id="resultado3"></p>
       </div>
